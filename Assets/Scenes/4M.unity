@@ -218,7 +218,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 35354323}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bb0e49954a8cc1f4688cad6b6f271c8a, type: 3}
   m_Name: 
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 35354323}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b5400abbc333d1a4d8f15893c2a4a8ce, type: 3}
   m_Name: 
@@ -518,7 +518,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &198647649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -526,7 +526,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 198647648}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56896cff30b172f4faca956fa6fd5924, type: 3}
   m_Name: 
@@ -536,8 +536,8 @@ MonoBehaviour:
   captureWidth: 640
   captureHeight: 480
   motionAnimator: {fileID: 1811238514}
-  WriteFile: 0
-  FileName: 0509_p2_gait_1_GT
+  WriteFile: 1
+  FileName: 0508_p1_gait_2_GT_test2
   detect_aruco: 0
 --- !u!4 &198647650
 Transform:
@@ -836,7 +836,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 596848186}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ace198c1a20236419f8a54ca02ab0bf, type: 3}
   m_Name: 
@@ -848,7 +848,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 596848186}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b5400abbc333d1a4d8f15893c2a4a8ce, type: 3}
   m_Name: 
@@ -1461,12 +1461,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 06d3bdd67cb52a447bbac276c7fb3ed9, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 06d3bdd67cb52a447bbac276c7fb3ed9, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 62a491c502be75d498dbbc8ba7a10a27, type: 2}
+      objectReference: {fileID: 9100000, guid: a52d1a979a8a16e4e96144758f992ad0, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06d3bdd67cb52a447bbac276c7fb3ed9, type: 3}
 --- !u!1 &963194225

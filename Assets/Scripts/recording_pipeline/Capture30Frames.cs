@@ -19,8 +19,8 @@ public class Capture30Frames : MonoBehaviour
         // int width = targetCamera.pixelWidth;
         // int height = targetCamera.pixelHeight;
 
-        int width = 640;
-        int height = 480;
+        int width = 1280;
+        int height = 720;
 
         // 建立 RenderTexture 與 Texture2D 用來抓取畫面
         renderTexture = new RenderTexture(width, height, 24);

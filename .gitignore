@@ -76,3 +76,10 @@ StreamingAssets/aa/
 # Keep meta files!
 # =========================
 !*.meta
+# =========================
+# Generated capture dumps (Unity-side recordings)
+# =========================
+Assets/Captures/[1-8]/
+Assets/Captures/[1-8].meta
+Assets/Captures/Camera_*/
+Assets/Captures/Camera_*.meta

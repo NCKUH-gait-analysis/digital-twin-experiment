@@ -189,9 +189,9 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
+  near clip plane: 0.6
+  far clip plane: 6
+  field of view: 65
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -200,7 +200,7 @@ Camera:
     m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 1
+  m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
@@ -318,6 +318,66 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 56822172}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &90417338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 90417339}
+  - component: {fileID: 90417340}
+  m_Layer: 0
+  m_Name: D455Config
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &90417339
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90417338}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.4602711, y: -1.6184915, z: 1.0210421}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &90417340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90417338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4223eeef1acc324eb8a5be13ce579d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameras:
+  - {fileID: 963194227}
+  - {fileID: 49736550}
+  - {fileID: 1998115361}
+  streamType: 1
+  applyOnStart: 1
+  applyInEditor: 1
+  targetDisplay: 0
+  setViewportRect: 1
+  viewportRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  nearClip: 0.6
+  farClip: 6
 --- !u!1 &120035755
 GameObject:
   m_ObjectHideFlags: 0
@@ -411,13 +471,14 @@ GameObject:
   m_Component:
   - component: {fileID: 198647650}
   - component: {fileID: 198647649}
+  - component: {fileID: 198647651}
   m_Layer: 0
   m_Name: CameraCapture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &198647649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -432,11 +493,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera: {fileID: 963194227}
   cameraIndex: 0
-  captureWidth: 640
-  captureHeight: 480
+  captureWidth: 1280
+  captureHeight: 800
   motionAnimator: {fileID: 1811238514}
   WriteFile: 0
-  FileName: 0509_p2_gait_1_GT
+  FileName: all_test
   detect_aruco: 0
 --- !u!4 &198647650
 Transform:
@@ -452,6 +513,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &198647651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198647648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df9acc94e577a704799525b9b368bb35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameras:
+  - {fileID: 963194227}
+  - {fileID: 49736550}
+  - {fileID: 1998115361}
+  captureWidth: 1280
+  captureHeight: 800
+  motionAnimator: {fileID: 0}
 --- !u!1 &275333925
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,7 +647,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &444243840
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -637,8 +717,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 444243839}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 0, y: 20, z: 1.5}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -0, y: 0.961, z: -0.887}
   m_LocalScale: {x: 0.001, y: 1, z: 1}
   m_Children:
   - {fileID: 1605577153}
@@ -647,7 +727,7 @@ Transform:
   - {fileID: 796196213}
   m_Father: {fileID: 0}
   m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &444243844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -849,6 +929,67 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 796196212}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &799138167
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 799138169}
+  - component: {fileID: 799138168}
+  m_Layer: 0
+  m_Name: MultiCameraMp4Recorder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &799138168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799138167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58d3784939f941040b91b46cee9878c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameras:
+  - {fileID: 963194227}
+  - {fileID: 49736550}
+  - {fileID: 1998115361}
+  folderName: 7
+  ffmpegPath: ffmpeg
+  overwriteExistingFiles: 1
+  captureWidth: 1280
+  captureHeight: 720
+  targetFPS: 30
+  recordOnStart: 1
+  stopWhenAnimationEnds: 1
+  motionAnimator: {fileID: 1811238514}
+  videoCodec: libx264
+  pixelFormat: yuv420p
+  encoderPreset: veryfast
+  crf: 18
+  flipVertical: 1
+--- !u!4 &799138169
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799138167}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.4602711, y: -1.6184915, z: 1.0210421}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &933955129
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -928,6 +1069,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Amber
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 06d3bdd67cb52a447bbac276c7fb3ed9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1973094975194804775, guid: 06d3bdd67cb52a447bbac276c7fb3ed9, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -995,12 +1140,12 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
+  near clip plane: 0.6
+  far clip plane: 6
+  field of view: 65
   orthographic: 0
   orthographic size: 5
-  m_Depth: -1
+  m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -1432,6 +1577,103 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1605577152}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1637348281
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1637348283}
+  - component: {fileID: 1637348282}
+  m_Layer: 0
+  m_Name: ArucoCap
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1637348282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637348281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df9acc94e577a704799525b9b368bb35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameras:
+  - {fileID: 963194227}
+  - {fileID: 49736550}
+  - {fileID: 1998115361}
+  captureWidth: 1280
+  captureHeight: 720
+  motionAnimator: {fileID: 1811238514}
+--- !u!4 &1637348283
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637348281}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.84626657, y: 1.526144, z: -0.49764934}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1787611416
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1787611418}
+  - component: {fileID: 1787611417}
+  m_Layer: 0
+  m_Name: quickcap
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1787611417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787611416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0105194e9a82b42428d29f7d565f1199, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetCamera: {fileID: 963194227}
+  cameraName: Camera0
+  frameCountToCapture: 30
+  targetFPS: 30
+--- !u!4 &1787611418
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787611416}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.33633143, y: 0.48031884, z: 3.0180798}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1811238514 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 06d3bdd67cb52a447bbac276c7fb3ed9, type: 3}
@@ -1582,9 +1824,9 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
+  near clip plane: 0.6
+  far clip plane: 6
+  field of view: 65
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -1593,7 +1835,7 @@ Camera:
     m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 2
+  m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
