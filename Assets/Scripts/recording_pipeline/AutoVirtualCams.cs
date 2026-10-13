@@ -10,7 +10,7 @@ using UnityEngine;
 //      每秒輪詢、即時調整 → 在 app 裡切換解析度,Unity 自動跟上,不會有黑邊
 //   2. 啟動參數 -capw / -caph(例: gait6cam.exe -capw 1280 -caph 720)
 //   3. 預設 640x480
-// 掛上 targetTexture 後 Game 視窗會變黑,屬正常現象。
+// 掛上 targetTexture 後 Game 視窗會變黑,屬正常現象;畫面左上角的 RuntimeControlPanel 仍可操作、底部有相機縮圖。
 // 啟用條件:場景名稱以 "6camera" 開頭,或啟動參數帶 -vcam。
 // 其他場景(4M、ground_truth_recording 等)由 MultiCameraStreamer /
 // MultiCameraMp4Recorder / GroundTruthRecorder 自己管理 targetTexture,不能被接管。
@@ -60,6 +60,13 @@ public static class AutoVirtualCams
 
         if (cams.Length == 0)
             Debug.LogWarning("[AutoVirtualCams] 場景中沒有啟用中的相機");
+
+        // 執行期面板:場景模式(棋盤/ArUco/錄影)+ 監看相機 + 人物動畫控制。
+        // 放在相機掛載之後,讓 SceneModeController 在 Start 時找得到帶 targetTexture 的相機。
+        var panelGo = new GameObject("RuntimeControlPanel");
+        Object.DontDestroyOnLoad(panelGo);
+        panelGo.AddComponent<SceneModeController>();
+        panelGo.AddComponent<RuntimeControlPanel>();
     }
 
     // 回傳是否帶了 -vcam(強制啟用)
